@@ -22,12 +22,6 @@ public class UserService {
 
         User user = new User(dto.getUserName(), dto.getEmail(), dto.getPassword());
         userRepository.save(user);
-        return new UserResponseDto(
-                user.getId(),
-                user.getUserName(),
-                user.getEmail(),
-                user.getCreatedAt(),
-                user.getUpdatedAt()
-        );
+        return new UserResponseDto(user);
     }
 }

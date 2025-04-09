@@ -1,5 +1,6 @@
 package com.sparta.gitflow.project.user.dto.response;
 
+import com.sparta.gitflow.project.user.entity.User;
 import lombok.Getter;
 
 import java.time.LocalDateTime;
@@ -12,11 +13,11 @@ public class UserResponseDto {
     private final LocalDateTime createdAt;
     private final LocalDateTime updatedAt;
 
-    public UserResponseDto(Long id, String userName, String email, LocalDateTime createdAt, LocalDateTime updatedAt) {
-        this.id = id;
-        this.userName = userName;
-        this.email = email;
-        this.createdAt = createdAt;
-        this.updatedAt = updatedAt;
+    public UserResponseDto(User user) {
+        this.id = user.getId();
+        this.userName = user.getUserName();
+        this.email = user.getEmail();
+        this.createdAt = user.getCreatedAt();
+        this.updatedAt = user.getUpdatedAt();
     }
 }
