@@ -29,7 +29,7 @@ public class User extends BaseEntity {
         this.id = id;
     }
 
-    public static User from(Long id) {
+    public static User of(Long id) {
         return new User(id);
     }
 
